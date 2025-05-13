@@ -111,7 +111,7 @@ export const login = async (req, res) => {
         })
 
         // store access token on frontend
-        return res.status(200).json({ accessToken, user: userWithoutPassword })
+        return res.status(200).json({ accessToken, user:userWithoutPassword })
 
     } catch (error) {
         console.log(`Login error: ${error.message}`);
