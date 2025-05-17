@@ -12,7 +12,7 @@ function ProfileSidebar() {
     const { selectedComponent, setSelectedComponent } = componentStore()
 
     return (
-        <motion.section variants={AnimationVariants} animate={"animate"} exit={"exit"} initial={"initial"} transition={{ duraition: 0.3 }} className={`absolute bg-white z-[100] lg:relative top-0 left-0  flex justify-between items-center min-h-screen h-full shadow-[10px_5px_15px_rgba(0,0,0,0.1)] rounded-tr-md rounded-br-md flex justify-start items-center flex-col transition-all duration-[300ms] ${isMenuOpen ? 'w-[300px]' : 'w-[50px]'}`}>
+        <motion.section variants={AnimationVariants} animate={"animate"} exit={"exit"} initial={"initial"} transition={{ duraition: 0.3 }} className={`absolute  backdrop-blur-lg z-[100] md:relative top-0 left-0  flex justify-between items-center min-h-screen h-full shadow-[10px_5px_15px_rgba(0,0,0,0.1)] rounded-tr-md rounded-br-md flex justify-start items-center flex-col transition-all duration-[300ms] ${isMenuOpen ? 'w-[300px] lg:w-[400px]' : 'w-[50px]'}`}>
             <div className='p-[10px] absolute top-0 right-0'>
                 <Menu color='gray' onClick={() => setIsMenuOpen(!isMenuOpen)} />
             </div>
@@ -33,7 +33,6 @@ function ProfileSidebar() {
                             <User />
                             <p>View Profile</p>
                         </div>
-                        {/* TODO: CONTAINS HOVER CODE FOR ACTIVE LINK */}
                         <div onClick={() => setSelectedComponent("edit-profile-page")} className={`hover:cursor-pointer transition-all transition-ease-in-out duration-[100ms]  flex justify-evenly items-center text-gray-500 rounded-md p-[15px] w-[80%] border-[1px] border-gray-200 ${selectedComponent === "edit-profile-page" && 'bg-[#3771FF] text-white'}`}>
                             <UserPen />
                             <p>Edit Profile</p>
