@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { AnimationVariants } from '../lib/AnimationVariants'
 import { userAuth } from '../store/userAuth.store'
-import { Cog, Menu, Pen, User, UserPen } from 'lucide-react'
+import { Cog, Menu, Pen, Receipt, User, UserPen } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { componentStore } from '../store/componentStore'
 
@@ -28,7 +28,7 @@ function ProfileSidebar() {
                         <p className='text-gray-500 text-[16px] mt-[7px]'>Hello</p>
                         <h1 className='text-[20px] font-bold'>{authUser?.username}</h1>
                     </figure>
-                    <main className='w-full flex flex-col justify-between items-center h-[200px] mt-[20px]'>
+                    <main className='w-full flex flex-col justify-between items-center h-[300px] mt-[20px]'>
                         <div onClick={() => setSelectedComponent("view-profile-page")} className={`hover:cursor-pointer transition-all transition-ease-in-out duration-[100ms]  flex justify-evenly items-center text-gray-500 rounded-md p-[15px] w-[80%] border-[1px] border-gray-200 ${selectedComponent === "view-profile-page" && 'bg-[#3771FF] text-white'}`}>
                             <User />
                             <p>View Profile</p>
@@ -41,6 +41,10 @@ function ProfileSidebar() {
                         <div onClick={() => setSelectedComponent("account-settings")} className={`hover:cursor-pointer transition-all transition-ease-in-out duration-[100ms]  flex justify-evenly items-center text-gray-500 rounded-md p-[15px] w-[80%] border-[1px] border-gray-200 ${selectedComponent === "account-settings" && 'bg-[#3771FF] text-white'}`}>
                             <Cog />
                             <p>Account Settings</p>
+                        </div>
+                        <div onClick={() => setSelectedComponent("view-donations-page")} className={`hover:cursor-pointer transition-all transition-ease-in-out duration-[100ms]  flex justify-evenly items-center text-gray-500 rounded-md p-[15px] w-[80%] border-[1px] border-gray-200 ${selectedComponent === "view-donations-page" && 'bg-[#3771FF] text-white'}`}>
+                            <Receipt />
+                            <p>View Donation History</p>
                         </div>
                     </main>
                 </>
