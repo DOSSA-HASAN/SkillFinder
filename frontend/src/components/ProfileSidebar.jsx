@@ -12,7 +12,7 @@ function ProfileSidebar() {
     const { selectedComponent, setSelectedComponent } = componentStore()
 
     return (
-        <motion.section variants={AnimationVariants} animate={"animate"} exit={"exit"} initial={"initial"} transition={{ duraition: 0.3 }} className={`flex-shrink-0 sticky backdrop-blur-lg z-[100] top-0 left-0 flex justify-between items-center min-h-screen h-full shadow-[10px_5px_15px_rgba(0,0,0,0.1)] rounded-tr-md rounded-br-md flex justify-start items-center flex-col transition-all duration-[300ms] ${isMenuOpen ? 'fixed top-0 left-0 w-full sm:w-[300px] h-full lg:w-[300px]  lg:sticky' : 'w-[50px] mr-3'}`}>
+        <motion.section variants={AnimationVariants} animate={"animate"} exit={"exit"} initial={"initial"} transition={{ duraition: 0.3 }} className={`flex-shrink-0 sticky backdrop-blur-lg z-[100] top-0 left-0 flex justify-between items-center min-h-screen h-full shadow-[10px_5px_15px_rgba(0,0,0,0.1)] rounded-tr-md rounded-br-md flex justify-start items-center flex-col transition-all duration-[300ms] ${isMenuOpen ? 'fixed top-0 left-0 w-full sm:w-[300px] h-full lg:w-[300px] lg:sticky' : 'w-[50px] mr-2'}`}>
             <div className='p-[10px] absolute top-0 right-0'>
                 <Menu color='gray' className={!isMenuOpen ? "visible" : "hidden"} onClick={() => setIsMenuOpen(!isMenuOpen)} />
                 <X color='gray' className={isMenuOpen ? "visible" : "hidden"} onClick={() => setIsMenuOpen(!isMenuOpen)} />
