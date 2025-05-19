@@ -19,7 +19,7 @@ function ViewProfile() {
 
     return (
 
-        <motion.section variants={AnimationVariants} animate={"animate"} exit={"exit"} initial={"initial"} transition={{ duraition: 0.3 }} className='flex flex-col justify-center items-center w-[calc(100%-80px)] md:w-[calc(100%-400px)] relative z-0 md:ml-[10px] lg:p-[20px]'>
+        <motion.section variants={AnimationVariants} animate={"animate"} exit={"exit"} initial={"initial"} transition={{ duraition: 0.3 }} className='flex flex-col justify-center items-center flex-1 relative md:shadow-md md:m-10 z-0 md:p-[20px] rounded-md md:bg-zinc-50'>
             <h1 className='text-[#1F2937] font-bold text-[30px] lg:text-[40px] w-full p-[0px] mb-5 border-b-1 border-gray-300 p-3'>View Profile</h1>
             <figure className='relative flex items-center w-full'>
                 <img className='rounded-full h-[110px] w-[110px] border-1 border-gray-400' src={authUser?.profilePic || "no-avatar.png"} alt="" />
